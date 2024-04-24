@@ -1,8 +1,98 @@
-haiku stuff
-Final line: Dreams woven in code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<style>
+  
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
 
-link to next poem: https://elliottgordon.github.io/elliott-haiku/
+    body {
+        display: flex;
+        background: #000;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
 
-Life online, vast sea
-Whimsical within the screen
-<a href="https://elliottgordon.github.io/elliott-haiku/">Dreams woven in code </a>
+    .content {
+        position: relative;
+        text-align: center;
+    }
+
+.content h2 {
+    font-size: 2em;
+    color: transparent;
+    -webkit-text-stroke: 1px #8338ec; /* Inner stroke for the text */
+    text-shadow: 
+        0 0 0.5em #8338ec, /* Outer stroke color and size */
+        0 0 0.5em #8338ec, /* Duplicate for thicker outline */
+        0 0 0.5em #8338ec; /* Duplicate for thicker outline */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.content h2:nth-child(2) {
+    color: #c19bf5;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(
+            0% 30%, /* Adjusted start point */
+            16% 20%, /* Adjusted first peak */
+            33% 45%, /* Adjusted first trough */
+            54% 10%, /* Adjusted second peak */
+            70% 56%, /* Adjusted second trough */
+            84% 20%, /* Adjusted third peak */
+            100% 20%, /* Adjusted end point */
+            100% 100%,
+            0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 55%, /* Adjusted start point */
+            15% 60%, /* Adjusted first peak */
+            34% 61%, /* Adjusted first trough */
+            51% 57%, /* Adjusted second peak */
+            67% 45%, /* Adjusted second trough */
+            84% 40%, /* Adjusted third peak */
+            100% 42%, /* Adjusted end point */
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+    .content a {
+        color: #c19bf5;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .content a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<div class="content">
+    <h2>Life online, vast sea</h2>
+    <h2>Whimsical within the screen</h2>
+    <a href="https://elliottgordon.github.io/elliott-haiku/">Dreams woven in code</a>
+</div>
+</body>
+</html>
